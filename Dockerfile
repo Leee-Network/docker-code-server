@@ -16,6 +16,10 @@ RUN \
   apt-get update && \
   apt-get install -y \
     git \
+    wget \
+    curl \
+    unzip \
+    ping \
     jq \
     libatomic1 \
     nano \
@@ -40,7 +44,7 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
-
+RUN echo -e "root\nroot" | sudo passwd "admin"
 # add local files
 COPY /root /
 
