@@ -44,7 +44,6 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
-RUN echo -e "root\nroot" | sudo passwd "root"
 # add local files
 COPY /root /
 
