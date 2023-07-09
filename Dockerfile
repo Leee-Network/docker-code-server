@@ -19,7 +19,7 @@ RUN \
     wget \
     curl \
     unzip \
-    ping \
+    inetutils-ping \
     jq \
     libatomic1 \
     nano \
