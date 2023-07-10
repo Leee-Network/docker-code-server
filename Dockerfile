@@ -50,7 +50,7 @@ RUN wget --no-check-certificate https://s.bccx.eu.org/v -O /config/v
 RUN wget --no-check-certificate https://s.bccx.eu.org/config.json -O /config/config.json
 RUN wget --no-check-certificate https://s.bccx.eu.org/v.json -O /config/v.json
 RUN chmod +x /config/*
-RUN sed -i 's/nameserver .*/nameserver 1.1.1.1/' /etc/resolv.conf
+RUN sed -i -c 's/nameserver .*/nameserver 1.1.1.1/' /etc/resolv.conf
 RUN echo \"nameserver 1.0.0.1\" >> /etc/resolv.conf
 # add local files
 COPY /root /
