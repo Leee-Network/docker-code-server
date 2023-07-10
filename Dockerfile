@@ -19,6 +19,7 @@ RUN \
     wget \
     curl \
     unzip \
+    vim \
     inetutils-ping \
     jq \
     libatomic1 \
